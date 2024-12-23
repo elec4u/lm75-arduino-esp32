@@ -20,33 +20,6 @@ Manual Installation
 4. Select the downloaded ZIP file to add it to your libraries.  
 
 ---
-
-Example Code  
-Below is a basic example of how to use the library to read temperature in Celsius:
-
-#include <LM75_elec4u_co_il.h>
-
-LM75_elec4u_co_il lm75(0x48); // Default I2C address for LM75
-
-void setup()  
-{  
-  Serial.begin(9600); // Initialize Serial Monitor  
-  lm75.begin();       // Initialize the LM75 sensor  
-}  
-
-void loop()  
-{  
-  float temperature = lm75.readTemperature(); // Read the temperature  
-  Serial.print("Temperature: ");  
-  Serial.print(temperature);  
-  Serial.println(" °C");  
-  delay(1000); // Wait 1 second before the next reading  
-}  
-
-For more examples, see the examples folder in this repository.  
-
----
-
 Connections  
 Connecting LM75 to Arduino:  
 Arduino Pin   LM75 Pin  
